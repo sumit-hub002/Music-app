@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Music App</h1>
+        </header>
+        <div class="player">
+            <div class="album-art">
+                <img src="pexels-benjaminlehman-1436141.jpg" alt="Album Art" id="album-art">
+            </div>
+            <div class="track-info">
+                <h2 id="track-title">Song Title</h2>
+                <h3 id="artist-name">Artist Name</h3>
+            </div>
+            <div class="controls">
+                <button id="prev"><i class="fas fa-backward"></i></button>
+                <button id="play-pause"><i class="fas fa-play"></i></button>
+                <button id="next"><i class="fas fa-forward"></i></button>
+                <button id="shuffle"><i class="fas fa-random"></i></button>
+                <button id="repeat"><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="progress-bar">
+                <input type="range" id="progress" value="0" max="100">
+            </div>
+            <div class="volume-control">
+                <input type="range" id="volume" value="100" max="100">
+            </div>
+            <div class="file-input">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fas fa-upload"></i> Upload Music
+                </label>
+                <input id="file-upload" type="file" accept="audio/*">
+            </div>
+        </div>
+        <div class="playlist">
+            <h2>Playlist</h2>
+            <ul id="playlist">
+                <!-- Tracks will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
